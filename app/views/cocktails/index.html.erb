@@ -1,11 +1,21 @@
-<div class ="container m-3">
-  <h1> Cocktails </h1>
-  <ul>
-    <% @cocktails.each do |cocktail| %>
-      <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-    <% end %>
-  </ul>
-
-<%= link_to "Create a new Cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url('https://res.cloudinary.com/marie-leleu/image/upload/v1605467397/benjamin-zanatta-g9fd4Z3qwag-unsplash_n5ung9.jpg');">
+  <div class="banner-content">
+    <h1>Marie's Cocktails</h1>
+    <p>where anything is possible!</p>
+    <%= link_to "Create a new Cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+  </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card" style= "width: 25rem; height: 14.5rem; background-image: url('https://res.cloudinary.com/marie-leleu/image/upload/v1605466793/3b27d236b7f15c381c6188bb811ff43b_wzusij.jpg');">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 

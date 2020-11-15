@@ -16,8 +16,3 @@ tonic = Ingredient.create(name: 'tonic')
 orange_liqueur = Ingredient.create(name: 'orange liqueur')
 sugar = Ingredient.create(name: 'sugar')
 
-mojito = Cocktail.create(name: 'mojito')
-
-margarita = Cocktail.create(name: 'margarita')
-
-gin_tonic = Cocktail.create(name: 'gin tonic')
